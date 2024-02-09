@@ -1,19 +1,20 @@
 package ru.mishkin.parser;
 
+import org.springframework.stereotype.Component;
+
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.Reader;
 import java.util.Scanner;
 
+@Component
 public class PlaylistParser {
 
-    public String parsePlaylist(File file) throws FileNotFoundException {
+    public static Integer getChunkId(File file) throws FileNotFoundException {
         Scanner sc = new Scanner(file);
-        String[] arr = null;
         String data = "";
-        while (sc.hasNextLine()) {
-            data = sc.nextLine();
-        }
-        return data;
+        while (sc.hasNextLine()) data = sc.nextLine();
+        String[] value = data.split("\\.");
+        String number = value[0];
+        return Integer.parseInt(number);
     }
 }
