@@ -24,24 +24,19 @@ public class IntercomRestClientImpl implements IntercomRestClient {
     private final HttpClient httpClient = HttpClient.newHttpClient();
 
     @Override
-    public void getVideoChunk(String chunkId) throws IOException, InterruptedException {
+    public void getVideoChunk(Integer chunkId) throws IOException, InterruptedException {
         HttpRequest build = HttpRequest.newBuilder()
-                .uri(URI.create(HOST + AREA + CAMERA_ID + chunkId))
+                .uri(URI.create(HOST + AREA + CAMERA_ID + chunkId.toString() +".ts"))
                 .GET()
                 .build();
-
-        System.out.println(build.uri());
 
         var response = httpClient.send(build, HttpResponse.BodyHandlers.ofByteArray());
         byte[] videoChunk = response.body();
 
         String root = "E:\\domofon";
-        String directory = root + "\\" + chunkId;
-        System.out.println(directory);
-
+        String directory = root + "\\" + chunkId +".ts";
 
         File outputVideoFile = new File(directory);
-        System.out.println(root);
 
         try (FileOutputStream outputStream = new FileOutputStream(outputVideoFile)) {
             outputStream.write(videoChunk);
@@ -49,7 +44,7 @@ public class IntercomRestClientImpl implements IntercomRestClient {
     }
 
     @Override
-    public void getPlaylist() throws IOException, InterruptedException {
+    public File getPlaylist() throws IOException, InterruptedException {
         HttpRequest build = HttpRequest.newBuilder()
                 .uri(URI.create(HOST + AREA + CAMERA_ID + PLAYLIST))
                 .GET()
@@ -60,13 +55,12 @@ public class IntercomRestClientImpl implements IntercomRestClient {
         byte[] playlist = response.body();
         Path root = Paths.get(".").normalize().toAbsolutePath();
         String directory = root + "\\" + "playlist.m3u8";
-        System.out.println(directory);
 
         File outputPlaylistFile = new File(directory);
-        System.out.println(root);
 
         try (FileOutputStream outputStream = new FileOutputStream(outputPlaylistFile)) {
             outputStream.write(playlist);
         }
+        return outputPlaylistFile;
     }
 }
