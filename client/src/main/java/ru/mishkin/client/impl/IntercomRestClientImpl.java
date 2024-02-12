@@ -26,15 +26,15 @@ public class IntercomRestClientImpl implements IntercomRestClient {
     @Override
     public void getVideoChunk(Integer chunkId) throws IOException, InterruptedException {
         HttpRequest build = HttpRequest.newBuilder()
-                .uri(URI.create(HOST + AREA + CAMERA_ID + chunkId.toString() +".ts"))
+                .uri(URI.create(HOST + AREA + CAMERA_ID + chunkId.toString() + ".ts"))
                 .GET()
                 .build();
 
         var response = httpClient.send(build, HttpResponse.BodyHandlers.ofByteArray());
         byte[] videoChunk = response.body();
 
-        String root = "E:\\domofon";
-        String directory = root + "\\" + chunkId +".ts";
+        String root = "E:\\DomofonParser\\temp";
+        String directory = root + "\\" + chunkId + ".ts";
 
         File outputVideoFile = new File(directory);
 

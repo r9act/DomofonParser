@@ -19,6 +19,7 @@ configurations {
 
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 dependencies {
@@ -28,7 +29,12 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 
     // https://mvnrepository.com/artifact/com.github.zakgof/velvet-video
-    implementation("com.github.zakgof:velvet-video:0.5.2")
+    implementation("com.github.zakgof:velvet-video:0.5.1")
+
+    // https://mvnrepository.com/artifact/com.github.zakgof/velvet-video
+    implementation("com.github.zakgof:velvet-video-natives:0.2.8.full")
+
+
 
 
 }
