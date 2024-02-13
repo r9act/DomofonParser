@@ -23,11 +23,19 @@ public class Scheduler {
     @Scheduled(cron = "0/10 * * ? * *")
     public void runProcessor() {
         videoStreamSaver.saveVideoStream();
+        System.out.println("Saved chunk!");
     }
 
     @SneakyThrows
-    @Scheduled(cron = "0/60 * * ? * *")
+    @Scheduled(cron = "0/11  * * ? * *")
     public void runVideoMerger() {
         videoPostProcessor.mergeVideo();
+        System.out.println("Merged videos!");
+    }
+    @SneakyThrows
+    @Scheduled(cron = "59/60  * * ? * *")
+    public void runVideoMoveToLib(){
+        videoPostProcessor.moveFileToLibrary();
+        System.out.println("Moved 1 min video to library!");
     }
 }
