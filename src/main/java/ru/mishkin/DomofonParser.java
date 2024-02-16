@@ -9,6 +9,10 @@ import java.io.IOException;
 public class DomofonParser {
 
     public static void main(String[] args) {
+
         SpringApplication.run(DomofonParser.class, args);
+
+
+
     }
 }

@@ -1,19 +1,18 @@
 package ru.mishkin.configuration;
 
 import lombok.SneakyThrows;
+import org.apache.log4j.Logger;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import ru.mishkin.service.VideoPostProcessor;
 import ru.mishkin.service.VideoStreamSaver;
 
-import java.util.logging.Logger;
-
 @EnableScheduling
 @Configuration
 public class Scheduler {
 
-    Logger logger = Logger.getLogger("Schedular");
+    Logger logger = Logger.getLogger(Scheduler.class);
 
     private final VideoStreamSaver videoStreamSaver;
     private final VideoPostProcessor videoPostProcessor;
@@ -37,7 +36,7 @@ public class Scheduler {
     @SneakyThrows
     @Scheduled(cron = "0/60 * * ? * *")
     public void runVideoMerger() {
-        videoPostProcessor.mergeVideo();
+        videoPostProcessor.mergeVideos();
         logger.info("Merged videos");
     }
 

@@ -28,6 +28,10 @@ dependencies {
     compileOnly("org.projectlombok:lombok")
     annotationProcessor("org.projectlombok:lombok")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+
+    // https://mvnrepository.com/artifact/log4j/log4j
+    implementation("log4j:log4j:1.2.16")
+
 }
 
 tasks.withType<Test> {
