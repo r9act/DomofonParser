@@ -1,0 +1,7 @@
+domofon:
+  folder:
+#    temp: ${TEMP}
+#    library: ${LIBRARY}
+    temp: "E:/DomofonParser/temp"
+    library: "E:/DomofonParser/library"
+
