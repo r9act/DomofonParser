@@ -1,5 +1,7 @@
 package ru.mishkin.service;
 
+import lombok.extern.log4j.Log4j;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -12,6 +14,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.stream.Stream;
 
+@Log4j
 @Component
 public class VideoPostProcessor {
 
@@ -46,8 +49,9 @@ public class VideoPostProcessor {
                     buffer.put(Files.readAllBytes(p));
                 }
                 Files.write(getFirstFileName(), buffer.array());
+                var numberOfMergedFiles = getFilesCount();
                 removeTempFiles();
-                logger.info("Files merged: " + getFilesCount());
+                logger.info("Files merged: " + numberOfMergedFiles);
             }
         }
     }

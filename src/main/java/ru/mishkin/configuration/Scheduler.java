@@ -12,8 +12,6 @@ import ru.mishkin.service.VideoStreamSaver;
 @Configuration
 public class Scheduler {
 
-    Logger logger = Logger.getLogger(Scheduler.class);
-
     private final VideoStreamSaver videoStreamSaver;
     private final VideoPostProcessor videoPostProcessor;
 
@@ -29,7 +27,7 @@ public class Scheduler {
     public void runProcessor() {
         videoStreamSaver.saveVideoStream();
         numberOfSavedChunks++;
-        logger.info("Saved chunks: "+numberOfSavedChunks);
+//        logger.info("Saved chunks: "+numberOfSavedChunks);
 
     }
 
@@ -37,17 +35,14 @@ public class Scheduler {
     @Scheduled(cron = "0/60 * * ? * *")
     public void runVideoMerger() {
         videoPostProcessor.mergeVideos();
-        logger.info("Merged videos");
     }
 
     @SneakyThrows
-    @Scheduled(cron = "0 */60 * ? * *")
-//    @Scheduled(cron = "0/10 * * ? * *")
+    @Scheduled(cron = "0 */61 * ? * *")
     public void runVideoMoveToLib(){
         if (numberOfSavedChunks >= 360) {
             videoPostProcessor.moveFileToLibrary();
             numberOfSavedChunks = 0;
-           logger.info("Moved file to library");
-        } else logger.info("Not enough files yet!");
+        }
     }
 }
