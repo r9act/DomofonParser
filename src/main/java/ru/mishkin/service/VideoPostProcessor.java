@@ -1,5 +1,8 @@
 package ru.mishkin.service;
 
+import lombok.extern.log4j.Log4j;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import ru.mishkin.utils.FileNameFormatter;
@@ -11,8 +14,11 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.stream.Stream;
 
+@Log4j
 @Component
 public class VideoPostProcessor {
+
+    Logger logger = Logger.getLogger(VideoPostProcessor.class);
 
     @Value("${domofon.folder.temp}")
     private String tempFolder;
@@ -30,13 +36,12 @@ public class VideoPostProcessor {
             if (stream.findAny().isPresent()) {
                 Files.copy(sourcePath, destinationPath);
                 Files.delete(sourcePath);
-            } else {
-                System.out.println("No files!");
+                logger.info("File moved to library: " + sourcePath + " -> " + destinationPath);
             }
         }
     }
 
-    public void mergeVideo() throws IOException {
+    public void mergeVideos() throws IOException {
         ByteBuffer buffer = ByteBuffer.wrap(new byte[getResultArrLength()]);
         try (DirectoryStream<Path> directory = Files.newDirectoryStream(Path.of((tempFolder)))) {
             if (getFilesCount() >= 2) {
@@ -44,7 +49,9 @@ public class VideoPostProcessor {
                     buffer.put(Files.readAllBytes(p));
                 }
                 Files.write(getFirstFileName(), buffer.array());
+                var numberOfMergedFiles = getFilesCount();
                 removeTempFiles();
+                logger.info("Files merged: " + numberOfMergedFiles);
             }
         }
     }
@@ -60,17 +67,18 @@ public class VideoPostProcessor {
                 }
             }).reduce(0, Integer::sum);
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            logger.error("Error happened while getting ResultArrayLength: " + e.getMessage());
         }
         return resultArrLength;
     }
 
     public Path getFirstFileName() {
-        Path headFileName;
+        Path headFileName = null;
         try (Stream<Path> files = Files.list(Path.of(tempFolder))) {
             headFileName = files.findFirst().get();
+            return headFileName;
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            logger.error("Error happened while getting FirstFileName: " + e.getMessage());
         }
         return headFileName;
     }
@@ -80,7 +88,7 @@ public class VideoPostProcessor {
         try (Stream<Path> files = Files.list(Path.of(tempFolder))) {
             filesCount = (int) files.count();
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            logger.error("Error happened while getting FilesCount: " + e.getMessage());
         }
         return filesCount;
     }
