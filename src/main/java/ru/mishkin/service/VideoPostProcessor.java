@@ -1,8 +1,7 @@
 package ru.mishkin.service;
 
-import lombok.extern.log4j.Log4j;
-import lombok.extern.slf4j.Slf4j;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import ru.mishkin.utils.FileNameFormatter;
@@ -14,11 +13,10 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.stream.Stream;
 
-@Log4j
 @Component
 public class VideoPostProcessor {
 
-    Logger logger = Logger.getLogger(VideoPostProcessor.class);
+    Logger logger = LoggerFactory.getLogger(VideoPostProcessor.class);
 
     @Value("${domofon.folder.temp}")
     private String tempFolder;
@@ -42,7 +40,9 @@ public class VideoPostProcessor {
     }
 
     public void mergeVideos() throws IOException {
+
         ByteBuffer buffer = ByteBuffer.wrap(new byte[getResultArrLength()]);
+
         try (DirectoryStream<Path> directory = Files.newDirectoryStream(Path.of((tempFolder)))) {
             if (getFilesCount() >= 2) {
                 for (Path p : directory) {
@@ -72,6 +72,7 @@ public class VideoPostProcessor {
         return resultArrLength;
     }
 
+    //TODO get rid of optional
     public Path getFirstFileName() {
         Path headFileName = null;
         try (Stream<Path> files = Files.list(Path.of(tempFolder))) {

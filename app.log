@@ -1,0 +1,157 @@
+2024-02-21 13:09:02.323 INFO  [MockServer-EventLog0] org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
+2024-02-21 13:09:02.624 INFO  [MockServer-EventLog0] org.mockserver.log.MockServerEventLog - 1080 creating expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/getPlaylist.m3u8"
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "body" : "dssd.ts"
+    },
+    "id" : "3b111830-2a0d-412a-93dd-fb87c122a682",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ with id:
+
+  3b111830-2a0d-412a-93dd-fb87c122a682
+
+2024-02-21 13:09:02.856 INFO  [MockServer-EventLog0] org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
+2024-02-21 13:09:22.520 INFO  [MockServer-EventLog0] org.mockserver.log.MockServerEventLog - 8888 started on port: 8888
+2024-02-21 13:09:22.801 INFO  [MockServer-EventLog0] org.mockserver.log.MockServerEventLog - 8888 creating expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/getPlaylist.m3u8"
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "body" : "dssd.ts"
+    },
+    "id" : "9fe774e9-8072-4133-afa9-c06166216953",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ with id:
+
+  9fe774e9-8072-4133-afa9-c06166216953
+
+2024-02-21 13:09:23.017 INFO  [MockServer-EventLog0] org.mockserver.log.MockServerEventLog - 8888 stopped for port: 8888
+2024-02-21 13:19:42.531 INFO  [MockServer-EventLog0] org.mockserver.log.MockServerEventLog - 8888 started on port: 8888
+2024-02-21 13:19:42.835 INFO  [MockServer-EventLog0] org.mockserver.log.MockServerEventLog - 8888 creating expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/getPlaylist.m3u8"
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "body" : "video1.ts"
+    },
+    "id" : "a4f1c2a1-4397-4c8c-b548-0c60d52bc310",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ with id:
+
+  a4f1c2a1-4397-4c8c-b548-0c60d52bc310
+
+2024-02-21 13:19:43.068 INFO  [MockServer-EventLog0] org.mockserver.log.MockServerEventLog - 8888 stopped for port: 8888
+2024-02-21 13:20:09.681 INFO  [MockServer-EventLog0] org.mockserver.log.MockServerEventLog - 8888 started on port: 8888
+2024-02-21 13:20:09.966 INFO  [MockServer-EventLog0] org.mockserver.log.MockServerEventLog - 8888 creating expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/getPlaylist.m3u8"
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "body" : "playlist.m3u8"
+    },
+    "id" : "4ae500fb-b714-4d0f-b8d7-b4449ec5363c",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ with id:
+
+  4ae500fb-b714-4d0f-b8d7-b4449ec5363c
+
+2024-02-21 13:20:10.194 INFO  [MockServer-EventLog0] org.mockserver.log.MockServerEventLog - 8888 stopped for port: 8888
+2024-02-21 13:20:25.914 INFO  [Test worker] org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [ru.mishkin.DomofonParserTests]: DomofonParserTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-02-21 13:20:25.991 INFO  [Test worker] org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration ru.mishkin.DomofonParser for test class ru.mishkin.DomofonParserTests
+2024-02-21 13:20:26.317 INFO  [Test worker] ru.mishkin.DomofonParserTests - Starting DomofonParserTests using Java 21 with PID 11380 (started by Artem in C:\Users\Artem\Desktop\DomofonParser)
+2024-02-21 13:20:26.318 DEBUG [Test worker] ru.mishkin.DomofonParserTests - Running with Spring Boot v3.2.2, Spring v6.1.3
+2024-02-21 13:20:26.318 INFO  [Test worker] ru.mishkin.DomofonParserTests - No active profile set, falling back to 1 default profile: "default"
+2024-02-21 13:20:27.334 WARN  [Test worker] org.springframework.boot.autoconfigure.mustache.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)
+2024-02-21 13:20:27.402 INFO  [Test worker] ru.mishkin.DomofonParserTests - Started DomofonParserTests in 1.296 seconds (process running for 2.464)
+2024-02-21 13:20:28.464 INFO  [MockServer-EventLog0] org.mockserver.log.MockServerEventLog - 8888 started on port: 8888
+2024-02-21 13:20:28.740 INFO  [MockServer-EventLog0] org.mockserver.log.MockServerEventLog - 8888 creating expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "GET",
+      "path" : "/getPlaylist.m3u8"
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "body" : "playlist.m3u8"
+    },
+    "id" : "27d7c650-333b-441e-a44c-2e964597699b",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ with id:
+
+  27d7c650-333b-441e-a44c-2e964597699b
+
+2024-02-21 13:20:28.963 INFO  [MockServer-EventLog0] org.mockserver.log.MockServerEventLog - 8888 stopped for port: 8888
+2024-02-21 13:20:33.909 INFO  [main] ru.mishkin.DomofonParser - Starting DomofonParser using Java 21.0.2 with PID 5084 (C:\Users\Artem\Desktop\DomofonParser\build\classes\java\main started by Artem in C:\Users\Artem\Desktop\DomofonParser)
+2024-02-21 13:20:33.910 DEBUG [main] ru.mishkin.DomofonParser - Running with Spring Boot v3.2.2, Spring v6.1.3
+2024-02-21 13:20:33.911 INFO  [main] ru.mishkin.DomofonParser - No active profile set, falling back to 1 default profile: "default"
+2024-02-21 13:20:34.542 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-02-21 13:20:34.548 INFO  [main] org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-02-21 13:20:34.549 INFO  [main] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-02-21 13:20:34.549 INFO  [main] org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-02-21 13:20:34.597 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-02-21 13:20:34.597 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 657 ms
+2024-02-21 13:20:34.880 WARN  [main] org.springframework.boot.autoconfigure.mustache.MustacheAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)
+2024-02-21 13:20:34.918 INFO  [main] org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-02-21 13:20:34.926 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-02-21 13:20:34.938 INFO  [main] ru.mishkin.DomofonParser - Started DomofonParser in 1.297 seconds (process running for 1.843)
+2024-02-21 13:20:40.369 INFO  [scheduling-1] ru.mishkin.configuration.Scheduler - Saved! 0
+2024-02-21 13:20:50.176 INFO  [scheduling-1] ru.mishkin.configuration.Scheduler - Saved! 1

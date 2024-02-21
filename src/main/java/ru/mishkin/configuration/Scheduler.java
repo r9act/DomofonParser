@@ -1,7 +1,8 @@
 package ru.mishkin.configuration;
 
 import lombok.SneakyThrows;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -11,6 +12,7 @@ import ru.mishkin.service.VideoStreamSaver;
 @EnableScheduling
 @Configuration
 public class Scheduler {
+    Logger logger = LoggerFactory.getLogger(Scheduler.class);
 
     private final VideoStreamSaver videoStreamSaver;
     private final VideoPostProcessor videoPostProcessor;
@@ -24,11 +26,10 @@ public class Scheduler {
 
     @SneakyThrows
     @Scheduled(cron = "0/10 * * ? * *")
-    public void runProcessor() {
+    public void runStreamSaver() {
         videoStreamSaver.saveVideoStream();
+        logger.info("Saved! " + numberOfSavedChunks);
         numberOfSavedChunks++;
-//        logger.info("Saved chunks: "+numberOfSavedChunks);
-
     }
 
     @SneakyThrows
@@ -39,7 +40,7 @@ public class Scheduler {
 
     @SneakyThrows
     @Scheduled(cron = "0 */61 * ? * *")
-    public void runVideoMoveToLib(){
+    public void runVideoMoveToLib() {
         if (numberOfSavedChunks >= 360) {
             videoPostProcessor.moveFileToLibrary();
             numberOfSavedChunks = 0;

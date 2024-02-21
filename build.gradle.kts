@@ -29,8 +29,11 @@ dependencies {
     annotationProcessor("org.projectlombok:lombok")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 
-    // https://mvnrepository.com/artifact/log4j/log4j
-    implementation("log4j:log4j:1.2.17")
+    // https://mvnrepository.com/artifact/org.mock-server/mockserver-client-java
+    implementation("org.mock-server:mockserver-client-java:5.15.0")
+    // https://mvnrepository.com/artifact/org.mock-server/mockserver-netty
+    testImplementation("org.mock-server:mockserver-netty:5.15.0")
+
 }
 
 tasks.withType<Test> {

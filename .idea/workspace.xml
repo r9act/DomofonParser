@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="726c195c-d049-4d75-992b-864fc49a28a6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/domo.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
+    <list default="true" id="726c195c-d049-4d75-992b-864fc49a28a6" name="Changes" comment="Logger implemented">
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/DomofonParser.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/mishkin/client/IntercomRestClientTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/mishkin/service/VideoPostProcessorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.5/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.5/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.5/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.5/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.5/executionHistory/executionHistory.bin" afterDir="false" />
@@ -15,35 +19,29 @@
       <change beforePath="$PROJECT_DIR$/.gradle/8.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.5/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/mishkin/ClientApp.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/mishkin/configuration/Scheduler.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ru/mishkin/configuration/Scheduler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/mishkin/service/VideoPostProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ru/mishkin/service/VideoPostProcessor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/ru/mishkin/client/ClientAppTests.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/libs/DomofonParser-0.0.1-SNAPSHOT-plain.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/DomofonParser-0.0.1-SNAPSHOT-plain.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/libs/DomofonParser-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/DomofonParser-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/ru.mishkin.client.ClientAppTests.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/ru.mishkin.client.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/ru.mishkin.client.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resolvedMainClassName" beforeDir="false" afterPath="$PROJECT_DIR$/build/resolvedMainClassName" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-ru.mishkin.client.ClientAppTests.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/bootJar/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/bootJar/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/ClientApp.class.uniqueId1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Scheduler.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/VideoPostProcessor.class.uniqueId2" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domo.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/playlist.m3u8" beforeDir="false" afterPath="$PROJECT_DIR$/playlist.m3u8" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mishkin/DomofonParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mishkin/DomofonParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/mishkin/configuration/Scheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mishkin/configuration/Scheduler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/mishkin/service/VideoPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mishkin/service/VideoPostProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/mishkin/client/DomofonParserTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/mishkin/DomofonParserTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +75,19 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="DomofonParser" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="application" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="DomofonParser" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="DomofonParser" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="verification" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -90,6 +100,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="spring-beans.schema" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -102,6 +113,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mock-server/mockserver-junit-jupiter-no-dependencies/5.15.0/40fd1649b4faff31363e100994bcb0ece8ead3cc/mockserver-junit-jupiter-no-dependencies-5.15.0.jar!/shaded_package/javax/annotation/meta/Exclusive.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.jdks/temurin-21.0.2/lib/src.zip!/java.base/java/nio/ByteBuffer.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.jdks/temurin-21.0.2/lib/src.zip!/java.base/java/nio/channels/FileChannel.java" root0="SKIP_INSPECTION" />
   </component>
@@ -123,38 +135,74 @@
     <option name="abbreviatePackageNames" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Gradle.Build DomofonParser.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.DomofonParser [build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.DomofonParser [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.ClientApp.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.DomofonParser.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;9-implement-logging&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-21&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Java&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Gradle.Build DomofonParser.executor": "Run",
+    "Gradle.DomofonParser [bootRun].executor": "Run",
+    "Gradle.DomofonParser [build].executor": "Run",
+    "Gradle.DomofonParser [clean].executor": "Run",
+    "Gradle.DomofonParser [jar].executor": "Run",
+    "Gradle.DomofonParser [testClasses].executor": "Run",
+    "Gradle.DomofonParser [test].executor": "Run",
+    "Gradle.DomofonParserTests.executor": "Run",
+    "Gradle.Download Sources.executor": "Run",
+    "Gradle.IntercomRestClientTest.executor": "Run",
+    "Gradle.IntercomRestClientTest.getPlayListShouldReturn200Status.executor": "Run",
+    "Gradle.IntercomRestClientTest.getPlayListShouldReturnFile.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.ClientApp.executor": "Run",
+    "Spring Boot.DomofonParser.executor": "Run",
+    "git-widget-placeholder": "11-write-tests",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "openjdk-21",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Java",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Spring Boot.DomofonParser">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Artem\Desktop\DomofonParser\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.IntercomRestClientTest">
+    <configuration name="DomofonParser [bootRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="bootRun" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="DomofonParser [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -199,6 +247,54 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="DomofonParserTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ru.mishkin.DomofonParserTests&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="IntercomRestClientTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ru.mishkin.client.IntercomRestClientTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="ClientApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="DomofonParser.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ru.mishkin.ClientApp" />
@@ -224,6 +320,9 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Gradle.DomofonParser [bootRun]" />
+      <item itemvalue="Gradle.IntercomRestClientTest" />
+      <item itemvalue="Gradle.DomofonParserTests" />
       <item itemvalue="Gradle.DomofonParser [build]" />
       <item itemvalue="Gradle.DomofonParser [clean]" />
       <item itemvalue="Spring Boot.ClientApp" />
@@ -231,8 +330,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.IntercomRestClientTest" />
+        <item itemvalue="Gradle.DomofonParserTests" />
         <item itemvalue="Gradle.DomofonParser [build]" />
         <item itemvalue="Gradle.DomofonParser [clean]" />
+        <item itemvalue="Gradle.DomofonParser [bootRun]" />
       </list>
     </recent_temporary>
   </component>
@@ -257,8 +359,21 @@
       <workItem from="1708110058602" duration="1097000" />
       <workItem from="1708111378335" duration="4957000" />
       <workItem from="1708279290686" duration="1294000" />
-      <workItem from="1708285963096" duration="297000" />
+      <workItem from="1708285963096" duration="975000" />
+      <workItem from="1708325767888" duration="599000" />
+      <workItem from="1708408522730" duration="13958000" />
+      <workItem from="1708466495705" duration="4339000" />
+      <workItem from="1708501773045" duration="6693000" />
     </task>
+    <task id="LOCAL-00001" summary="Logger implemented">
+      <option name="closed" value="true" />
+      <created>1708286640717</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1708286640717</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,5 +392,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Logger implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="Logger implemented" />
   </component>
 </project>
